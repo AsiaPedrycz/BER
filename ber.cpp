@@ -6,14 +6,17 @@
 using namespace std;
 
 void ZapiszDoDziennika(string tekst);
+void PrzygotujPlik(string nazwa, int rozmiar, char znak);
 
 int main()
 {
     cout << "obliczanie BER"<<endl;
-    ZapiszDoDziennika("Test tego");
+    ZapiszDoDziennika("Rozpoczecie pracy");
 
     //delay(1020);
-    ZapiszDoDziennika("2 test");
+    PrzygotujPlik("plik1.bin",100,0x55);
+    PrzygotujPlik("plik2.bin",100,0x55);
+    
 
     return 0;
 
@@ -33,3 +36,19 @@ void ZapiszDoDziennika(string tekst)
         }
 } 
 
+void PrzygotujPlik(string nazwa, int rozmiar, char znak)
+{
+    ZapiszDoDziennika("Rozpoczecie tworzenia pliku o nazwie: " + nazwa );
+    fstream plik;
+    plik.open(nazwa, ios::binary | ios::out);
+    if (plik.good())
+        {
+            for (int a=0; a<rozmiar; a++)
+                plik << znak;
+            plik.close();    
+            ZapiszDoDziennika("Zakonczenie tworzenia pliku o nazwie: " + nazwa );
+        }
+    
+
+
+}
