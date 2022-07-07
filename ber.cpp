@@ -23,21 +23,34 @@ do
         {
         case 1:
             system("cls");
-            cout << "wybor 1"<<endl;
+            cout << "Tworzenie dwoch takich samych malych plikow"<<endl;
+            PrzygotujPlik("plik1.bin",100,0x55);
+            PrzygotujPlik("plik2.bin",100,0x55);
+            ZapiszDoDziennika("Utworzono dwa identyczne male pliki po 100B");
             system("pause");
             break;
         case 2:
             system("cls");
-            cout << "wybor 2"<<endl;
+            cout << "Tworzenie dwoch roznych malych plikow"<<endl;
+            PrzygotujPlik("plik1.bin",100,0x55);
+            PrzygotujPlik("plik2.bin",100,0x50);
+            ZapiszDoDziennika("Utworzono dwa identyczne male pliki po 100B");
             system("pause");
             break;
         case 3:
             system("cls");
-            cout << "wybor 3"<<endl;
+            cout << "Tworzenie dwoch roznych duzych plikow"<<endl;
+            PrzygotujPlik("plik1.bin",400*1048576,0x55);
+            PrzygotujPlik("plik2.bin",400*1048576,0x50);
+            ZapiszDoDziennika("Utworzono dwa rozne duze pliki po 400MB");
             system("pause");
             break;
-         //default:
-           // break;
+         default:
+            cout << "Wybierz inna wartosc. Ta jest nieobslugiwana!"<<endl;
+			system("pause");
+			system("cls");
+			cin.clear();
+            break;
         }
 } while( liczba != 0 );
 
