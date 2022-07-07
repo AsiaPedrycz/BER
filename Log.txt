@@ -1,0 +1,10 @@
+Data zdarzenia: Wed Jul 06 23:20:48 2022
+ - Test tego
+Data zdarzenia: Wed Jul 06 23:20:48 2022
+ - Rozpoczecie tworzenia pliku o nazwie: plik1.bin
+Data zdarzenia: Wed Jul 06 23:20:48 2022
+ - Zakonczenie tworzenia pliku o nazwie: plik1.bin
+Data zdarzenia: Wed Jul 06 23:20:48 2022
+ - Rozpoczecie tworzenia pliku o nazwie: plik2.bin
+Data zdarzenia: Wed Jul 06 23:20:48 2022
+ - Zakonczenie tworzenia pliku o nazwie: plik2.bin
